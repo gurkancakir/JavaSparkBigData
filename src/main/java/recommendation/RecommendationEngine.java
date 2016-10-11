@@ -156,7 +156,7 @@ public class RecommendationEngine {
 
 		DataFrame teenagers = sqlContext.sql("SELECT * FROM ratings WHERE ratings.user = 1 and product in (938,919)");
 
-		System.out.println("Number of rows : (user = 1 and product = 938 ) : " + teenagers.count());
+		System.out.println("Number of rows : (user = 1 and product = (938,919)) : " + teenagers.count());
 		
 		Row[] filteredDF = teenagers.collect();
 		
